@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+    
+    <style>
+      table {
+            width: auto;
+            height: 80vh;
+            table-layout: fixed;
+            border-collapse: separate;
+            border-spacing: 10px;
+        }
+
+        tr:nth-child(1),
+        tr:nth-child(3) {
+            background-color: yellow;
+        }
+        tr:nth-child(2) td:nth-child(3){
+            background-color: white;
+        }
+        tr:nth-child(2) td:nth-child(1) {
+            background-color: blue;
+        }
+        tr:nth-child(2) td:nth-child(2),
+        tr:nth-child(2) td:nth-child(4){
+            background-color: red;
+        }
+        td {
+            border: 1px solid black;
+            line-height: 20px;
+        }
+        tr:nth-child(1) td[colspan="4"],
+        tr:nth-child(3) td[colspan="4"] {
+            line-height: 20px;
+            height: 20px;
+        }
+        tr:nth-child(2) td {
+            line-height: 150px;
+            height: 150px;
+        }
+        .white-box {
+            background-color: white;
+            margin-left: 10px;
+            width: 300px; 
+            height: 20px;
+            display: inline-block;
+            border: 1px solid black;
+          }
+          .numb {
+            padding: 10px;
+            text-align: right;
+          }
+    </style>
+</head>
+<body>
+    <main class="lab-content">
+        <p class="title">Фіксована таблична верстка</p>
+        
+        <table>
+            <tr>
+                <td colspan="4"><span class="white-box"></span><span class="numb">1</span></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td colspan="4">6</td>
+            </tr>
+        </table>
+    </main>
+    <p>Основні характеристики цієї верстки включають:</p>
+    <ul>
+        <li>Встановлюються конкретні значення ширини і висоти таблиці, що залишаються сталі незалежно від розміру вмісту.</li>
+        <li>Встановлюється параметр table-layout: fixed;, щоб ширина стовпців була фіксованою і не змінювалася в залежності від вмісту.</li>
+        <li>Використання CSS для стилізації: Застосовуються стилі CSS для кожного елемента таблиці, таких як td і tr, для відображення кольорів фону, рамок тощо.</li>
+    </ul>
+
+    <pre><code>
+        &lt;style&gt;
+            table {
+                width: auto;
+                height: 80vh;
+                table-layout: fixed;
+                border-collapse: separate;
+                border-spacing: 10px;
+            }
+        
+            tr:nth-child(1),
+            tr:nth-child(3) {
+                background-color: yellow;
+            }
+            tr:nth-child(2) td:nth-child(3){
+                background-color: white;
+            }
+            tr:nth-child(2) td:nth-child(1) {
+                background-color: blue;
+            }
+            tr:nth-child(2) td:nth-child(2),
+            tr:nth-child(2) td:nth-child(4){
+                background-color: red;
+            }
+            td {
+                border: 1px solid black;
+                line-height: 20px;
+            }
+            tr:nth-child(1) td[colspan="4"],
+            tr:nth-child(3) td[colspan="4"] {
+                line-height: 20px;
+                height: 20px;
+            }
+            tr:nth-child(2) td {
+                line-height: 150px;
+                height: 150px;
+            }
+            .white-box {
+                background-color: white;
+                margin-left: 10px;
+                width: 300px; 
+                height: 20px;
+                display: inline-block;
+                border: 1px solid black;
+            }
+            .numb {
+                padding: 10px;
+                text-align: right;
+            }
+        &lt;/style&gt;
+        </code></pre>
+        <pre><code>
+            &lt;table&gt;
+                &lt;tr&gt;
+                    &lt;td colspan=&quot;4&quot;&gt;&lt;span class=&quot;white-box&quot;&gt;&lt;/span&gt;&lt;span class=&quot;numb&quot;&gt;1&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;2&lt;/td&gt;
+                    &lt;td&gt;3&lt;/td&gt;
+                    &lt;td&gt;4&lt;/td&gt;
+                    &lt;td&gt;5&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td colspan=&quot;4&quot;&gt;6&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+</code></pre>
+
+</body>
+</html>

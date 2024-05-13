@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <main class="lab-content">
+        <p class="title">Логічні оператори</p>
+        <ul>
+            <li>not: Використовується для вибору стилів, які застосовуються до елементів, якщо умова не виконується.</li>
+        </ul>
+<pre>
+    <code>
+        @media not (max-width: 1900px) {
+            /* Стилі, які будуть застосовуватися до елементів, коли ширина екрану не більше 1900px */
+            .content {
+                width: 15%;
+            }
+        }            
+    </code>
+</pre>
+        <ul>
+            <li>and: Використовується для вибору стилів, які застосовуються до елементів, якщо одночасно виконуються дві або більше умов.</li>
+        </ul>
+<pre>
+    <code>
+        @media only screen and (max-width: 750px) {
+            /* Стилі, які будуть застосовуватися лише до елементів на екранах з максимальною шириною 750px */
+            .content {
+                width: 40%;
+            }
+        }          
+    </code>
+</pre>
+        <ul>
+            <li>only: Використовується для того, щоб стилі застосовувалися лише до певного типу пристрою та умови.</li>
+        </ul>
+<pre>
+    <code>
+        @media only screen and (max-width: 750px) {
+            /*стилі для .content будуть застосовані тільки до екранів з максимальною шириною 750px*/
+            .content {
+                width: 40%;
+            }
+        }        
+    </code>
+</pre>
+        
+    </main>
+</body>
+</html>

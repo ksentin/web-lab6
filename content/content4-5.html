@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <main class="lab-content">
+        <p class="title">Мобільна версія</p>
+        <p>Зазвичай діапазон ширини екранів для мобільних пристроїв може бути від приблизно 320px до 480px або 768px:</p>
+        <ul>
+            <li>Від приблизно 320px до 480px: Цей діапазон ширини екрану зазвичай відповідає меншим смартфонам та пристроям зі звичайними розмірами екрану.</li>
+            <li>Від приблизно 481px до 767px: Цей діапазон вже може включати смартфони зі широкоформатними екранами або ті, що підтримують роздільну здатність HD.</li>
+        </ul>
+        <p> Зовнішній вигляд сторінки:</p>
+        <div class="photo-content4-5">
+            <img src="photo/pic47.png" alt="Second Photo">
+        </div>
+        <p>Код адаптивної верстки:</p>
+        <pre>
+            <code>
+                @media screen and (max-width: 500px) {
+                    header{
+                        width: auto;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    header .buttontext {
+                        height: 23px;
+                        width: 60px;
+                        font-size: 10px;
+                    }
+                    header .button {
+                        width: auto;
+                    }
+                    .cart-icon {
+                        margin-right: 5px;
+                        width: 44%;
+                        height: auto;
+                    }
+                    main{
+                        margin-top: 15px;
+                    }
+                    .content {
+                        width: 60%;
+                    }
+                    .intro .name{
+                        font-size: 18px;
+                    }
+                    .intro img {
+                        width: 100px;
+                    }
+                    .filter-select {
+                        width: 20px;
+                        height: 30px;
+                        margin: 0;
+                        margin-left: 10px;
+                    }
+                    .search-field {
+                        height: 30px;
+                        margin: 0;
+                        margin-top: 20px;
+                    }
+                    .search-button {
+                        height: 20px;
+                        font-size: 10px;
+                        margin: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center; 
+                    }
+                    .search-input {
+                        font-size: 10px;
+                    }
+                    .gallery{
+                        margin: 0;
+                    }
+                    .bestchoice{
+                        font-size: 6px;
+                    }
+                    .title{
+                        width: 250px;
+                    }
+                    .title {
+                        display: inline-block;
+                        vertical-align: middle; 
+                    }
+                    .intro{
+                        width: auto;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    header .with-border {
+                        height: 20px;
+                    }
+                }
+                
+                @media (max-width: 400px) {
+                    header{
+                        width: auto;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    header .buttontext {
+                        height: 23px;
+                        width: 60px;
+                        font-size: 10px;
+                    }
+                    header .button {
+                        width: auto;
+                    }
+                    header p {
+                        font-size: 10px;
+                    }
+                    header div {
+                        margin: 5px;
+                    }
+                    .cart-icon {
+                        margin-right: 5px;
+                        width: 44%;
+                        height: auto;
+                    }
+                    main{
+                        margin-top: 15px;
+                    }
+                    .content {
+                        width: 60%;
+                    }
+                    .intro .name{
+                        font-size: 18px;
+                    }
+                    .intro img {
+                        width: 100px;
+                    }
+                    .filter-select {
+                        width: 20px;
+                        height: 30px;
+                        margin: 0;
+                        margin-left: 10px;
+                    }
+                    .search-field {
+                        height: 30px;
+                        margin: 0;
+                        margin-top: 20px;
+                    }
+                    .search-button {
+                        height: 20px;
+                        font-size: 10px;
+                        margin: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center; 
+                    }
+                    .search-input {
+                        font-size: 10px;
+                    }
+                    .gallery{
+                        margin: 0;
+                    }
+                    .bestchoice{
+                        font-size: 6px;
+                    }
+                    .title{
+                        width: 250px;
+                    }
+                    .title {
+                        display: inline-block;
+                        vertical-align: middle; 
+                    }
+                    .intro{
+                        width: auto;
+                        margin-left: auto;
+                        margin-right: auto;
+                    } 
+                }
+                
+                @media (max-width: 360px) {
+                    .content {
+                        width: 60%;
+                        font-size: 13px;
+                    }
+                    header div {
+                        margin: 2px;
+                    }
+                    .content button{
+                        font-size: 13px;
+                    }
+                    .content img{
+                        height: 230px;
+                    }
+                    .intro .name{
+                        font-size: 14px;
+                    }
+                    .intro img {
+                        width: 100px;
+                    }
+                    .title{
+                        width: 200px;
+                    }
+                    footer {
+                        font-size: 10px;
+                        margin-left: 50px;
+                        margin-right: 50px;
+                    }
+                }
+                
+                
+                @media (max-width: 310px) {
+                    .content {
+                        width: 60%;
+                        font-size: 13px;
+                    }
+                    header p {
+                        margin-right: 5px;
+                    }
+                    .content button{
+                        font-size: 13px;
+                    }
+                    .search-input {
+                        width: 140px;
+                    }
+                    .content img{
+                        height: 180px;
+                    }
+                    .intro .name{
+                        font-size: 14px;
+                    }
+                    .intro img {
+                        width: 80px;
+                    }
+                    .title{
+                        width: 150px;
+                    }
+                    footer {
+                        font-size: 10px;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    } 
+                }
+            </code>
+        </pre>
+    </main>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <main class="lab-content">
+        <p class="title">Планшетна версія</p>
+        <p>Основні розміри для планшетної верстки можуть бути визначені в залежності від ширини екрана планшетного пристрою. Зазвичай для планшетної верстки використовують такі діапазони ширин екранів:</p>
+        <ul>
+            <li>Від приблизно 668px до 1024px: Цей діапазон ширин часто використовується для планшетних пристроїв у портретному режимі.</li>
+            <li>Від приблизно 1025px до 1200px: Цей діапазон може включати планшетні пристрої у ландшафтному режимі та менші ноутбуки.</li>
+        </ul>
+        <p> Зовнішній вигляд сторінки:</p>
+        <div class="photo-content4-4">
+            <img src="photo/pic46.png" alt="Second Photo">
+        </div>
+        <p>Код адаптивної верстки:</p>
+        <pre>
+            <code>
+                @media (max-width: 1200px) {
+                    .content {
+                        width: 25%;
+                    }
+                }
+                
+                @media (max-width: 900px) {
+                    .content {
+                        width: 35%;
+                    }
+                    .search-input {
+                        width: 300px;
+                    }
+                    .intro .name{
+                        font-size: 70px;
+                    }
+                    .intro img {
+                        width: 250px;
+                    }
+                    .titletext{
+                        font-size: 10px;
+                    }
+                }
+                
+                @media (max-width: 820px) {
+                    .content {
+                        width: 40%;
+                    }
+                    .intro .name{
+                        font-size: 50px;
+                    }
+                    .intro img {
+                        width: 50%;
+                    }
+                }
+                
+                @media only screen and (max-width: 750px) {
+                    .content {
+                        width: 40%;
+                    }
+                    .intro img {
+                        width: 40%;
+                    }
+                    header p {
+                        font-size: 14px;
+                    }
+                    header div {
+                
+                        width: auto;
+                    }
+                    header .buttontext {
+                        height: 28px;
+                        width: 70px;
+                        font-size: 15px;
+                    }
+                    .cart-icon {
+                        margin-right: 5px;
+                        width: 30%;
+                        height: auto;
+                    }
+                }
+                
+                @media screen and (max-width: 600px) {
+                    .content {
+                        width: 50%;
+                    }
+                    header p {
+                        font-size: 10px;
+                    }
+                    .intro .name{
+                        font-size: 30px;
+                    }
+                    .intro img {
+                        width: 30%;
+                    }
+                    .bestchoice{
+                        font-size: 14px;
+                    }
+                    .titletext{
+                        font-size: 7px;
+                    }
+                    .search-input {
+                        width: 200px;
+                    }
+                    .intro{
+                        width: 400px;
+                        margin: 0;
+                    }
+                    .title{
+                        width: 300px;
+                    }
+                    .search-field {
+                        height: 40px;
+                    }
+                    .search-button {
+                        margin: 0;
+                        justify-content: center;
+                        align-items: center; 
+                    }
+                    .filter-select {
+                        width: 100px;
+                        height: auto;
+                        margin: 0;
+                        margin-left: 10px;
+                    }
+                    .gallery{
+                        margin: 0;
+                    }
+                }
+            </code>
+        </pre>
+    </main>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <main class="lab-content">
+        <p class="title">Код програми:</p>
+        <p>updateTime(): Ця функція оновлює відображення поточного часу на сторінці. Вона отримує поточний час (години, хвилини, секунди), а потім встановлює цей час в елемент з ідентифікатором "currentTime" у форматі "години:хвилини:секунди".</p>
+        <pre>
+<code>
+    function updateTime() {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+    
+        const currentTimeElement = document.getElementById('currentTime');
+        currentTimeElement.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+</code>
+        </pre> 
+        <p>setInterval(updateTime, 1000): Цей рядок встановлює інтервал оновлення часу кожну секунду. Функція updateTime буде викликатися кожну секунду для оновлення часу на сторінці.</p>
+        <pre>
+<code>
+    setInterval(updateTime, 1000);
+</code>
+        </pre>   
+        <p>setAlarm(): Ця функція встановлює будильник на певну дату та час, які вводить користувач. Вона отримує значення введених дати та часу, створює об'єкт Date на основі цих значень і встановлює інтервал для перевірки, чи настав вказаний час. Якщо настав час, виводиться повідомлення про те, що будильник спрацював.</p>
+        <pre>
+<code>
+    function setAlarm() {
+        // Отримуємо дату та час введені користувачем
+        const alarmDate = document.getElementById('alarmDate').value;
+        const alarmTime = document.getElementById('alarmTime').value;
+    
+        // чи введено як дату, так і час
+        if (alarmDate && alarmTime) {
+            const alarmDateTime = new Date(`${alarmDate}T${alarmTime}`);
+            const currentTime = new Date();
+    
+            // інтервал для перевірки часу та активації будильника
+            alarmInterval = setInterval(function() {
+                const now = new Date();
+                if (now >= alarmDateTime) {
+                    document.getElementById('message').textContent = 'Будильник спрацював!';
+                    clearInterval(alarmInterval); // очищення інтервалу, якщо будильник спрацював
+                }
+            }, 1000);
+    
+            //повідомлення про будильник
+            document.getElementById('message').textContent = `Будильник встановлено на ${alarmDateTime}`;
+        } else {
+            alert('Будь ласка, виберіть дату та час для встановлення будильника.');
+        }
+    }
+</code>
+        </pre>  
+        <p>disableAlarm(): Ця функція вимикає будильник. Вона очищає інтервал, який був встановлений для перевірки часу для будильника, тим самим зупиняючи процес перевірки, і виводить повідомлення про те, що будильник вимкнено.</p>
+        <pre>
+<code>
+    function disableAlarm() {
+        clearInterval(alarmInterval); // зупинити перевірку часу для будильника
+        document.getElementById('message').textContent = 'Будильник вимкнено';
+    }
+</code>
+        </pre>       
+    </main>
+</body>
+</html>

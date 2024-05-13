@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <main class="lab-content">
+        <p class="title">Десктопна версія</p>
+        <p>Десктопна верстка зазвичай використовується для екранів комп'ютерів та ноутбуків. Основні розміри для десктопної верстки можуть варіюватися в залежності від контексту та вимог проекту, але в середньому можна виділити наступні типові розміри екранів:</p>
+        <ul>
+            <li>Малий десктоп (Small Desktop): Зазвичай починається з ширини приблизно 1024px і може досягати до 1280px.</li>
+            <li>Середній десктоп (Medium Desktop): Ширини екранів можуть бути від 1280px до 1440px.</li>
+            <li>Великий десктоп (Large Desktop): Це найбільші розміри, які можуть бути використані для десктопної верстки. Ширини екранів можуть починатися від 1440px і вище. Великі монітори, високооптимізовані для великих веб-сайтів та додатків, можуть мати розміри навіть більше 1920px.</li>
+        </ul>
+        <p> Зовнішній вигляд сторінки:</p>
+        <div class="photo-сontent1-3">
+            <img src="photo/pic44.png" alt="Second Photo">
+        </div>
+        <div class="photo-сontent1-3">
+            <img src="photo/pic45.png" alt="Second Photo">
+        </div>
+        <p>Код адаптивної верстки:</p>
+        <pre>
+            <code>
+                @media (max-width: 2000px) {
+                    .content {
+                        width: 13%;
+                    }
+                }
+                
+                @media not (max-width: 1900px) {
+                    .content {
+                        width: 15%;
+                    }
+                }
+                
+                @media (max-width: 1400px) {
+                    .intro .name{
+                        font-size: 100px;
+                    }
+                }
+                
+                @media (max-width: 1500px) {
+                    .intro .name{
+                        font-size: 100px;
+                    }
+                    .titletext{
+                        width: 80%;
+                    }
+                    .content {
+                        width: 20%;
+                    }
+                }
+                
+                @media (max-width: 1200px) {
+                    .content {
+                        width: 25%;
+                    }
+                }
+            </code>
+        </pre>
+    </main>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <main class="lab-content">
+        <p class="title">Код програми:</p>
+        <h3>Функція для реєстрації signupForm:</h3>
+        <ul>
+            <li>addEventListener: Встановлює обробник події на формі реєстрації, який виконується при поданні форми.</li>
+            <li>preventDefault: Зупиняє стандартну дію браузера, щоб форма не відправлялася на сервер.</li>
+            <li>Отримання значень: Отримується значення полів введення для імені, прізвища, електронної пошти та пароля.</li>
+            <li>Перевірка валідності даних: Виконується перевірка правильності введених даних за допомогою регулярних виразів.</li>
+            <li>displayErrorMessage: Відображає повідомлення про помилку, якщо введені дані неправильні.</li>
+            <li>clearErrorMessages: Очищає попередні повідомлення про помилки перед відображенням нових.</li>
+        </ul>
+        <pre>
+<code>
+    document.addEventListener('DOMContentLoaded', function() {
+        var signupForm = document.getElementById('signupForm');
+    
+        signupForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            clearErrorMessages();
+    
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+    
+            // Перевіряємо правильність введеного імені та прізвища
+            if (!isValidName(firstName)) {
+                displayErrorMessage('firstName', 'Ім\'я може містити тільки літери');
+            }
+    
+            if (!isValidName(lastName)) {
+                displayErrorMessage('lastName', 'Прізвище може містити тільки літери');
+            }
+    
+            // Перевіряємо правильність введеної електронної пошти
+            if (!isValidEmail(email)) {
+                displayErrorMessage('email', 'Введіть коректну електронну пошту');
+            }
+    
+            // Перевіряємо довжину пароля
+            if (password.length &lt 8) {
+                displayErrorMessage('password', 'Пароль повинен містити щонайменше 8 символів');
+            }
+        });
+    
+        //перевірка правильності введеного імені та прізвища
+        function isValidName(name) {
+            var regex = /^[A-Za-zА-Яа-яЇї]+$/;
+            return regex.test(name);
+        }
+    
+        //перевірки правильності введеної електронної пошти
+        function isValidEmail(email) {
+            var regex = /^\S+@\S+\.\S+$/;
+            return regex.test(email);
+        }
+    
+        //відображення повідомлення про помилку
+        function displayErrorMessage(inputId, message) {
+            var inputField = document.getElementById(inputId);
+            inputField.classList.add('error');
+            var errorMessage = document.createElement('div');
+            errorMessage.classList.add('error-message');
+            errorMessage.textContent = message;
+            inputField.parentNode.appendChild(errorMessage);
+        }
+    
+        //очищення попередніх повідомлень про помилки
+        function clearErrorMessages() {
+            var errorMessages = document.querySelectorAll('.error-message');
+            errorMessages.forEach(function(errorMessage) {
+                errorMessage.parentNode.removeChild(errorMessage);
+            });
+            var errorFields = document.querySelectorAll('.error');
+            errorFields.forEach(function(errorField) {
+                errorField.classList.remove('error');
+            });
+        }
+    });
+    
+</code>
+        </pre> 
+        <h3>Функція для входу loginForm:</h3>
+        <ul>
+            <li>addEventListener: Встановлює обробник події на формі входу, який виконується при поданні форми.</li>
+            <li>preventDefault: Зупиняє стандартну дію браузера, щоб форма не відправлялася на сервер.</li>
+            <li>Отримання значень: Отримується значення полів введення для електронної пошти та пароля.</li>
+            <li>Перевірка валідності даних: Виконується перевірка правильності введених даних за допомогою регулярних виразів.</li>
+            <li>displayErrorMessage: Відображає повідомлення про помилку, якщо введені дані неправильні.</li>
+            <li>clearErrorMessages: Очищає попередні повідомлення про помилки перед відображенням нових.</li>
+        </ul>
+        <pre>
+<code>
+    document.addEventListener('DOMContentLoaded', function() {
+        var loginForm = document.getElementById('signinForm');
+    
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            clearErrorMessages();
+    
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+    
+            //правильність введеної електронної пошти
+            if (!isValidEmail(email)) {
+                displayErrorMessage('email', 'Введіть коректну електронну пошту');
+            }
+    
+            //довжина пароля
+            if (password.length &lt 8) {
+                displayErrorMessage('password', 'Пароль повинен містити щонайменше 8 символів');
+            }
+        });
+    
+        //перевірка правильності введеної електронної пошти
+        function isValidEmail(email) {
+            var regex = /^\S+@\S+\.\S+$/;
+        }
+    
+        //відображення повідомлення про помилку
+        function displayErrorMessage(inputId, message) {
+            var inputField = document.getElementById(inputId);
+            inputField.classList.add('error');
+            var errorMessage = document.createElement('div');
+            errorMessage.classList.add('error-message');
+            errorMessage.textContent = message;
+            inputField.parentNode.appendChild(errorMessage);
+        }
+    
+        //очищення попередніх повідомлень про помилки
+        function clearErrorMessages() {
+            var errorMessages = document.querySelectorAll('.error-message');
+            errorMessages.forEach(function(errorMessage) {
+                errorMessage.parentNode.removeChild(errorMessage);
+            });
+            var errorFields = document.querySelectorAll('.error');
+            errorFields.forEach(function(errorField) {
+                errorField.classList.remove('error');
+            });
+        }
+    });
+</code>
+        </pre>   
+              
+    </main>
+</body>
+</html>

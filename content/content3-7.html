@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+    
+    <style>
+        .task {
+            font-family: Arial, sans-serif;
+            margin-left: 20px;
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        .header, .footer {
+            background-color: blue;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            flex-shrink: 0;
+            border: 1px solid #000000;
+        }
+        
+        .content {
+            overflow: hidden;
+            display: flex;
+            flex: 1;
+        }
+        
+        .column {
+            flex: 1;
+            display: flex;
+            border: 1px solid #000000;
+            text-align: center;
+        }
+
+        .column h3 {
+            margin: 0; 
+            text-align: center; 
+        }
+
+        .column:nth-child(2) {
+            flex: 2;
+            background-color: #f2f2f2;
+        }
+
+        .column:nth-child(1),
+        .column:nth-child(3) {
+            flex: 1;
+            background-color: yellow;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <main class="lab-content">
+        <p class="title">Гумова блокова верстка</p>
+        
+        <div class="task">
+            <div class="header">
+                <h3>1</h3>
+            </div>
+        
+            <div class="content">
+                <div class="column">
+                    <h3>2</h3>
+                </div>
+                <div class="column">
+                    <h3>3</h3>
+                </div>
+                <div class="column">
+                    <h3>4</h3>
+                </div>
+            </div>
+        
+            <div class="footer">
+                <h3>5</h3>
+            </div>
+        </div>
+    </main>
+
+    <p>Основні характеристики цієї верстки включають:</p>
+    <ul>
+        <li>Властивість display: flex; встановлює контейнер .task як flex-контейнер, що дозволяє гнучко розташовувати його дочірні елементи.</li>
+        <li>Відсоткові розміри: Ширина та висота контейнера .task задаються у відсотках (height: 100vh;), що дозволяє контейнеру займати весь видимий висоту екрану.</li>
+        <li>Гнучкість розміщення елементів за допомогою flex: Дочірні елементи контейнера .task, такі як .header, .footer та .content, використовують flex-властивості для розміщення. Наприклад, .content має flex: 1;, що дозволяє йому займати усі доступні залишкові простори у контейнері.</li>
+        <li>Гнучкість ширини блоків: Для блоків .column використовуються відсоткові значення ширини (наприклад, flex: 1;, flex: 2;), що дозволяє їм гнучко розміщуватися відносно один одного та змінювати свою ширину в залежності від розміру контейнера.</li>
+    </ul>
+
+    <pre><code>
+        &lt;style&gt;
+        .task {
+            font-family: Arial, sans-serif;
+            margin-left: 20px;
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        .header, .footer {
+            background-color: blue;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            flex-shrink: 0;
+            border: 1px solid #000000;
+        }
+        
+        .content {
+            overflow: hidden;
+            display: flex;
+            flex: 1;
+        }
+        
+        .column {
+            flex: 1;
+            display: flex;
+            border: 1px solid #000000;
+            text-align: center;
+        }
+
+        .column h3 {
+            margin: 0; 
+            text-align: center; 
+        }
+
+        .column:nth-child(2) {
+            flex: 2;
+            background-color: #f2f2f2;
+        }
+
+        .column:nth-child(1),
+        .column:nth-child(3) {
+            flex: 1;
+            background-color: yellow;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        &lt;/style&gt;
+    </code></pre>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #B5DCDF;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+  
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EFF9FF; 
+    margin: 10px;
+    border: 2px solid #000000; 
+    border-radius: 10px; 
+    color: #fff; 
+    padding: 10px;
+    font-family: 'Montserrat';
+}
+  
+.upper-header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.lower-header  {
+    width: auto;
+    justify-content: center;
+}
+  
+button {
+    margin-right: 10px;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.photo-section, .text-section {
+    flex: 1;
+    text-align: center; 
+}
+
+.photo-section{
+    flex: 0 0 15%;
+    margin-top: auto;
+}
+  
+.text-section {
+    flex: 0 0 70%;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px; 
+}
+
+p {
+    line-height: 1.6;
+    color: #555;
+}
+
+button {
+    background-color: #D9D9D9;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Montserrat';
+}
+
+.pressed {
+    background-color: #555;
+    color: #EFF9FF;
+}
+
+button:hover {
+    background-color: #555;
+    color: #EFF9FF;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #EFF9FF;
+    text-align: center;
+    height: 44px;
+    padding: 10px;
+    margin-top: auto; 
+    border-top: 2px solid #000000; 
+}
+
+.main2 {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons button {
+    margin-bottom: 10px;
+    border: 1px solid #000000; 
+    border-radius: 20px;
+    width: 238px;
+    height: 40px;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    text-align: left;
+    background-color: #D9D9D9;
+}
+
+.buttons {
+    flex-shrink: 0;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    margin-left: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.buttons button:hover {
+    background-color: #555;
+    color: #EFF9FF;
+}
+
+.buttons button.right {
+    margin-left: 150px;
+    width: fit-content;
+}
+
+.main2-content {
+    flex: 1;
+    background-color: #D9D9D9;
+    margin: 30px;
+    height: 380px;
+    width: 1770px; 
+    border: 1px solid #000000;
+    overflow: auto; 
+}
+
+#main-lab3 {
+    height: 500px;
+}
+
+.lab-content {
+    font-family: 'Montserrat';
+    text-align: left;
+    color: #000000;
+    font-size: 12px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.lab-content .main-title{
+    font-weight: bold;
+    background-color: #EFF9FF;
+}
+
+.lab-content .subtitle{
+    font-weight: bold;
+}
+
+.lab-content span{
+    font-weight: bold;
+}
+
+.photo-сontent1-3 {
+    margin: auto;
+    margin-left: 25px;
+}
+
+.photo-сontent1-3 img {
+    width: 50%;
+    max-height: 400px;
+}
+
+.lab-content p{
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+.photo-content4-4, .photo-content4-5{
+    height: 800px;
+    width: 50%;
+    position: relative;
+    margin-left: 15px;
+}
+
+.photo-content4-5{
+    height: 700px;
+}
+
+.photo-content4-4 img {
+    width: 100%;
+    max-height: 800px;
+}
+
+.photo-content4-5 img {
+    width: 70%;
+    max-height: 800px;
+}
+
+#photo-сontent5{
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    background-color: #dfb5c9;
+}
+
+#photo-сontent5 img{
+    margin: 10px;
+}

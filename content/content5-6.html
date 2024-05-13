@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(to bottom, #b8d4f1, #dff7fe);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        #currentTime {
+            margin-top: 30px;
+            font-size: 25px;
+            text-align: center;
+            background-color: aliceblue;
+            border-radius: 10px;
+            border: 2px solid #0e17b9;
+            font-family: "Roboto Mono", monospace;
+        }
+
+        .datetime-inputs {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .date-input,
+        .time-input {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-top: 40px;
+            align-items: center;
+        }
+
+        .date-input{
+            border-right: 3px solid #0056b3;
+        }
+
+
+        .date-input label,
+        .time-input label {
+            display: block;
+            color: #333;
+            font-family: "Roboto Mono", monospace;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input[type="date"],
+        input[type="time"],
+        .alarmbuttons button {
+            font-size: 17px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            border: 2px solid #0e17b9;
+        }
+
+        .alarmbuttons {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .alarmbuttons button {
+            background-color: #007bff;
+            height: 35px;
+            color: #fff;
+            transition: background-color 0.3s;
+            margin: 40px;
+            border: 1px solid #0056b3;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            font-family: "Roboto Mono", monospace;
+            font-size: 15px;
+        }
+
+        .alarmbuttons button:hover {
+            background-color: #7c97cd;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <main class="lab-content">
+        <div class="container">
+            <h1>Будильник</h1>
+            <div id="currentTime"></div>
+            <div class="datetime-inputs">
+                <div class="date-input">
+                    <label for="alarmDate">Виберіть дату будильника:</label>
+                    <input type="date" id="alarmDate">
+                </div>
+                <div class="time-input">
+                    <label for="alarmTime">Виберіть час будильника:</label>
+                    <input type="time" id="alarmTime">
+                </div>
+            </div>
+            <div class="alarmbuttons">
+                <button onclick="setAlarm()">Встановити будильник</button>
+                <button onclick="disableAlarm()">Вимкнути будильник</button>
+            </div>
+            <div id="message"></div>
+        </div>
+    </main>
+</body>
+</html>

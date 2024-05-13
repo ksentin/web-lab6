@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <main class="lab-content">
+        <p class="title">CSS-код сторінки:</p>
+        <pre><code>
+            @font-face {
+                font-family: 'Literata';
+                src: url('fonts/Literata_24pt-Medium.ttf') format('truetype');
+            }
+            
+            body {
+                margin: 0;
+                font-family: 'Literata', sans-serif;
+            }
+            
+            .container {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+            
+            .header, .footer {
+                background-color: #333;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+                height: fit-content;
+            }
+            
+            .main {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .field-1, .field-2, .field-3{
+                background-color: #ffffff;
+                padding: 20px;
+                margin: 10px;
+                text-align: center;
+                border: #f8f8f8;
+            }
+            
+            .field-1{
+                display: flex;
+                flex-direction: row;
+            }
+            
+            .elem {
+                width: 200px;
+                height: 100px;
+                background-color: #333;
+                padding: 20px;
+                margin: 10px;
+                text-align: center;
+                display: flex;
+                flex-direction: column; 
+                justify-content: center;
+            }
+            
+            .elem img {
+                max-width: 100%; 
+                max-height: 100%;
+                width: auto;
+                height: auto;
+                margin: 0 auto 10px;
+            }
+            
+            .elem p {
+                margin: 0;
+                color: #f8f8f8;
+            }
+            
+            .field-2{
+                display: flex;
+                flex-direction: column;
+                background-color: #333;
+            }
+            
+            .field-3{
+                height: 420px;
+            }
+            
+            .main-part{
+                height: 250px;
+                display: flex;
+                flex-direction: row;
+            }
+            
+            .main-text-bold{
+                font-weight: bold;
+                color: #fff;
+                font-size: 15px;
+            }
+            
+            .main-text-bold .blue{
+                color: rgb(0, 139, 225);
+                font-size: 20px;
+            }
+            
+            .gold {
+                color: rgb(186, 124, 29);
+                font-weight: bold;
+                font-size: 20px;
+            }
+            
+            .black {
+                color: rgb(0, 0, 0);
+                font-weight: bolder;
+                font-size: 30px;
+            }
+            
+            .white{
+                color: #fff;
+            }
+            
+            .textbox1{
+                text-align: left;
+                flex: 2;
+                margin: 20px;
+            }
+            
+            .textbox2{
+                text-align: left;
+                flex: 2;
+                margin: 20px;
+            }
+            
+            .main-part-photo {
+                flex: 1;
+                width: 400px;
+                height: 270px;
+                overflow: hidden;
+            }
+            
+            .main-part-photo img {
+                max-width: 100%; 
+                max-height: 100%;
+                width: auto;
+                height: auto;
+            }
+            
+            .textbox1 li{
+                font-weight: bold;
+            }
+            
+            .field-3 .textbox1 p{
+                margin-left: 40px;
+            }
+            
+            .footer {
+                display: flex;
+                height: 70px;
+                flex-direction: row;
+                background-color: rgba(0, 0, 0, 0);
+            }
+            
+            .year{
+                background-color: #333;
+                flex: 20;
+                margin-top: 20px;
+                text-align: center;
+                border-radius: 10px;
+            }
+            
+            .elem2 {
+                flex: 1;
+                width: 10px; 
+                height: 50px; 
+                background-color: #333;
+                padding: 10px;
+                margin: 10px;
+                text-align: center;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            .elem2 img {
+                max-width: 100%; 
+                max-height: 100%;
+                width: auto;
+                height: auto;
+            }
+            </code></pre>
+            
+        
+    </main>
+</body>
+</html>
